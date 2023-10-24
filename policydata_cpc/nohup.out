@@ -1,0 +1,7 @@
+Unknown option: -U
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.659 seconds.
+Prefix dict has been built successfully.

@@ -1,0 +1,223 @@
+(tf) D:\const_and_others\others\郭老师实验室\恒生电子\han>python -u "d:\const_and_others\others\郭老师实验室\恒生电子\han\main.py"
+2023-09-03 14:18:08.749932: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\bert\optimization.py:87: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+tf.keras ver. 2.2.4-tf
+[('batch_size', 32), ('bert_path', 'data/cased_L-12_H-768_A-12'), ('clip_norm', 5.0), ('data_dir', 'data/price/preprocessed/'), ('days', 5), ('dr', 0.3), ('hidden_size', 50), ('host', [(<AddressFamily.AF_INET6: 23>, 0, 0, '', ('::1', 8080, 0, 0)), (<AddressFamily.AF_INET: 2>, 0, 0, '', ('127.0.0.1', 8080))]), ('l2', 1e-06), ('learning_rate', 0.001), ('log_interval', 50), ('max_date_len', 40), ('max_news_len', 30), ('model_dir', 'checkpoints/'), ('no_gpu', 0), ('output_dir', 'summaries/'), ('patience', 1), ('pickle_path', 'data/sp500glove.pkl'), ('random_search', 0), ('seed', 2019), ('train_epochs', 50), ('tweet_dir', 'data/tweet/preprocessed/'), ('vocab_size', 33000), ('whitelist', []), ('word_embed_path', 'data/glove.twitter.27B.50d.txt')]
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\main.py:118: The name tf.enable_eager_execution is deprecated. Please use tf.compat.v1.enable_eager_execution instead.
+
+2023-09-03 14:18:11.541159: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+2023-09-03 14:18:11.560430: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+2023-09-03 14:18:11.654062: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce MX350 major: 6 minor: 1 memoryClockRate(GHz): 1.468
+pciBusID: 0000:01:00.0
+2023-09-03 14:18:11.661639: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2023-09-03 14:18:11.691873: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2023-09-03 14:18:11.715471: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2023-09-03 14:18:11.724846: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2023-09-03 14:18:11.759351: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2023-09-03 14:18:11.783977: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2023-09-03 14:18:11.849402: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2023-09-03 14:18:11.853288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2023-09-03 14:18:13.878116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-09-03 14:18:13.881075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0
+2023-09-03 14:18:13.882982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N
+2023-09-03 14:18:13.887023: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 1343 MB memory) -> physical GPU (device: 0, name: GeForce MX350, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Using device /gpu:0, and data format channels_first.
+Load dataset.. data/sp500glove.pkl
+#total 26620
+#train 20345
+#dev 2555
+#test  3720
+pickle max_date_len 554
+pickle max_news_len 104
+param max_date_len 40
+param max_news_len 30
+class_weights [1.01481445 0.98561186]
+2023-09-03 14:18:14.697984: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce MX350 major: 6 minor: 1 memoryClockRate(GHz): 1.468
+pciBusID: 0000:01:00.0
+2023-09-03 14:18:14.714887: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2023-09-03 14:18:14.719123: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2023-09-03 14:18:14.723561: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2023-09-03 14:18:14.726836: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2023-09-03 14:18:14.730683: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2023-09-03 14:18:14.733377: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2023-09-03 14:18:14.736101: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2023-09-03 14:18:14.740081: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2023-09-03 14:18:14.744876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce MX350 major: 6 minor: 1 memoryClockRate(GHz): 1.468
+pciBusID: 0000:01:00.0
+2023-09-03 14:18:14.749007: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2023-09-03 14:18:14.751651: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2023-09-03 14:18:14.754275: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2023-09-03 14:18:14.758451: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2023-09-03 14:18:14.761842: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2023-09-03 14:18:14.764617: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2023-09-03 14:18:14.767404: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2023-09-03 14:18:14.770105: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2023-09-03 14:18:14.773487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-09-03 14:18:14.776667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0
+2023-09-03 14:18:14.779128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N
+2023-09-03 14:18:14.781068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1343 MB memory) -> physical GPU (device: 0, name: GeForce MX350, pci bus id: 0000:01:00.0, compute capability: 6.1)
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\dataset.py:589: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+
+WARNING:tensorflow:From D:\anaconda\envs\tf\lib\site-packages\tensorflow_core\python\data\util\random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will
+be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+Shuffle.. Done 0:00:00.074216
+2023-09-03 14:18:15.315257: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce MX350 major: 6 minor: 1 memoryClockRate(GHz): 1.468
+pciBusID: 0000:01:00.0
+2023-09-03 14:18:15.323535: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2023-09-03 14:18:15.327536: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2023-09-03 14:18:15.330182: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2023-09-03 14:18:15.334038: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2023-09-03 14:18:15.337365: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2023-09-03 14:18:15.341488: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2023-09-03 14:18:15.345648: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2023-09-03 14:18:15.348192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2023-09-03 14:18:15.350426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-09-03 14:18:15.353195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0
+2023-09-03 14:18:15.355593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N
+2023-09-03 14:18:15.357936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 1343 MB memory) -> physical GPU (device: 0, name: GeForce MX350, pci bus id: 0000:01:00.0, compute capability: 6.1)
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\model.py:94: The name tf.keras.layers.CuDNNGRU is deprecated. Please use tf.compat.v1.keras.layers.CuDNNGRU instead.
+
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\main.py:153: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\main.py:167: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2023-09-03 14:18:25.427494: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 10330 of 20345
+2023-09-03 14:18:34.314167: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:195] Shuffle buffer filled.
+2023-09-03 14:18:34.447029: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2023-09-03 14:18:35.131613: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+WARNING:tensorflow:From d:\const_and_others\others\郭老师实验室\恒生电子\han\bert\optimization.py:117: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+#trainable_params 1651305
+Epoch #1        Step #49        Loss: 0.660569 (1.4 steps/sec)
+Epoch #1        Step #99        Loss: 0.768247 (4.6 steps/sec)
+Epoch #1        Step #149       Loss: 0.771611 (4.7 steps/sec)
+Epoch #1        Step #199       Loss: 0.709947 (4.5 steps/sec)
+Epoch #1        Step #249       Loss: 0.665141 (4.6 steps/sec)
+Epoch #1        Step #299       Loss: 0.686338 (4.3 steps/sec)
+Epoch #1        Step #349       Loss: 0.662633 (4.4 steps/sec)
+Epoch #1        Step #399       Loss: 0.739188 (4.2 steps/sec)
+Epoch #1        Step #449       Loss: 0.712620 (4.2 steps/sec)
+Epoch #1        Step #499       Loss: 0.770189 (4.5 steps/sec)
+Epoch #1        Step #549       Loss: 0.639095 (3.8 steps/sec)
+Epoch #1        Step #599       Loss: 0.685446 (4.3 steps/sec)
+
+Train time for epoch #1 (0 total steps): 171.945 sec
+Dev set: Average loss: 0.693825, Accuracy: 53.346% (7.091 sec)
+Save checkpoint checkpoints/ckpt
+Min loss 0.693825, dev acc. 53.346%, ep 1
+
+2023-09-03 14:21:24.537837: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 10058 of 20345
+2023-09-03 14:21:34.536571: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 16256 of 20345
+2023-09-03 14:21:41.183764: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:195] Shuffle buffer filled.
+Epoch #2        Step #49        Loss: 0.669930 (1.2 steps/sec)
+Epoch #2        Step #99        Loss: 0.701703 (3.0 steps/sec)
+Epoch #2        Step #149       Loss: 0.770647 (3.3 steps/sec)
+Epoch #2        Step #199       Loss: 0.690455 (4.3 steps/sec)
+Epoch #2        Step #249       Loss: 0.690776 (4.4 steps/sec)
+Epoch #2        Step #299       Loss: 0.690688 (4.2 steps/sec)
+Epoch #2        Step #349       Loss: 0.700232 (4.4 steps/sec)
+Epoch #2        Step #399       Loss: 0.741135 (4.4 steps/sec)
+Epoch #2        Step #449       Loss: 0.698617 (4.4 steps/sec)
+Epoch #2        Step #499       Loss: 0.787665 (4.3 steps/sec)
+Epoch #2        Step #549       Loss: 0.621830 (4.7 steps/sec)
+Epoch #2        Step #599       Loss: 0.692370 (4.4 steps/sec)
+
+Train time for epoch #2 (0 total steps): 185.502 sec
+Dev set: Average loss: 0.694990, Accuracy: 51.859% (4.627 sec)
+patience 1/1
+Min loss 0.693825, dev acc. 53.346%, ep 1
+
+2023-09-03 14:24:34.697256: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 10944 of 20345
+2023-09-03 14:24:42.861242: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:195] Shuffle buffer filled.
+Epoch #3        Step #49        Loss: 0.652069 (1.7 steps/sec)
+Epoch #3        Step #99        Loss: 0.711596 (4.8 steps/sec)
+Epoch #3        Step #149       Loss: 0.755058 (4.7 steps/sec)
+Epoch #3        Step #199       Loss: 0.695551 (4.5 steps/sec)
+Epoch #3        Step #249       Loss: 0.682235 (4.6 steps/sec)
+Epoch #3        Step #299       Loss: 0.704807 (4.5 steps/sec)
+Epoch #3        Step #349       Loss: 0.707520 (4.5 steps/sec)
+Epoch #3        Step #399       Loss: 0.739296 (4.5 steps/sec)
+Epoch #3        Step #449       Loss: 0.729611 (4.5 steps/sec)
+Epoch #3        Step #499       Loss: 0.755492 (4.6 steps/sec)
+Epoch #3        Step #549       Loss: 0.631176 (4.8 steps/sec)
+Epoch #3        Step #599       Loss: 0.670208 (4.6 steps/sec)
+
+Train time for epoch #3 (0 total steps): 156.297 sec
+Dev set: Average loss: 0.691991, Accuracy: 52.955% (4.631 sec)
+Save checkpoint checkpoints/ckpt
+Min loss 0.691991, dev acc. 52.955%, ep 3
+
+2023-09-03 14:27:15.705083: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 10980 of 20345
+2023-09-03 14:27:23.841240: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:195] Shuffle buffer filled.
+Epoch #4        Step #49        Loss: 0.677066 (1.7 steps/sec)
+Epoch #4        Step #99        Loss: 0.713393 (4.7 steps/sec)
+Epoch #4        Step #149       Loss: 0.733551 (4.7 steps/sec)
+Epoch #4        Step #199       Loss: 0.694785 (4.4 steps/sec)
+Epoch #4        Step #249       Loss: 0.689805 (4.6 steps/sec)
+Epoch #4        Step #299       Loss: 0.696542 (4.5 steps/sec)
+Epoch #4        Step #349       Loss: 0.701940 (4.6 steps/sec)
+Epoch #4        Step #399       Loss: 0.759070 (4.5 steps/sec)
+Epoch #4        Step #449       Loss: 0.710467 (4.5 steps/sec)
+Epoch #4        Step #499       Loss: 0.766301 (4.6 steps/sec)
+Epoch #4        Step #549       Loss: 0.641569 (4.9 steps/sec)
+Epoch #4        Step #599       Loss: 0.688554 (4.7 steps/sec)
+
+Train time for epoch #4 (0 total steps): 155.752 sec
+Dev set: Average loss: 0.689847, Accuracy: 54.677% (4.572 sec)
+Save checkpoint checkpoints/ckpt
+Min loss 0.689847, dev acc. 54.677%, ep 4
+
+2023-09-03 14:29:56.113208: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:145] Filling up shuffle buffer (this may take a while): 10922 of 20345
+2023-09-03 14:30:04.343424: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:195] Shuffle buffer filled.
+Epoch #5        Step #49        Loss: 0.674487 (1.7 steps/sec)
+Epoch #5        Step #99        Loss: 0.709008 (4.8 steps/sec)
+Epoch #5        Step #149       Loss: 0.732100 (4.6 steps/sec)
+Epoch #5        Step #199       Loss: 0.695755 (4.5 steps/sec)
+Epoch #5        Step #249       Loss: 0.676163 (4.6 steps/sec)
+Epoch #5        Step #299       Loss: 0.704158 (4.5 steps/sec)
+Epoch #5        Step #349       Loss: 0.675143 (4.5 steps/sec)
+Epoch #5        Step #399       Loss: 0.741350 (4.5 steps/sec)
+Epoch #5        Step #449       Loss: 0.710592 (4.5 steps/sec)
+Epoch #5        Step #499       Loss: 0.803070 (4.5 steps/sec)
+Epoch #5        Step #549       Loss: 0.630961 (4.7 steps/sec)
+Epoch #5        Step #599       Loss: 0.691493 (3.6 steps/sec)
+
+Train time for epoch #5 (0 total steps): 164.223 sec
+Dev set: Average loss: 0.694478, Accuracy: 51.468% (7.994 sec)
+Apply early stopping
+Load the last checkpoint.. checkpoints/ckpt-3
+Test set: Average loss: 0.692417, Accuracy: 51.559% (16.102 sec)
+              precision    recall  f1-score   support
+
+        DOWN       0.50      0.87      0.64      1812
+          UP       0.59      0.18      0.28      1908
+
+    accuracy                           0.52      3720
+   macro avg       0.55      0.52      0.46      3720
+weighted avg       0.55      0.52      0.45      3720
